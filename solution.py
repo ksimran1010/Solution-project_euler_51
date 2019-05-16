@@ -11,7 +11,7 @@ class Start_scan:
         if self.num_dig<= 5:
             raise Exception("You have entered no. less than 5, there is no famiy of 8 primes that exist for digits small than 5. Enter a valid number and rerun the program")
         self.rep_by = ['0','1','2','3','4','5','6','7','8','9']
-        self.lowerLimit = 5     #
+        self.lowerLimit = 5     #  lower limit of digit from which scanning should start
         self.prime_family_limit = 8
         ans =     input('press any key to start ')
         print("scanning")
@@ -71,7 +71,7 @@ class Start_scan:
     def scan_number(self, num_to_rep, digit_to_rep_with):
         temp_arr = [num_to_rep]
         count =1
-        if len(num_to_rep) >self.lowerLimit:                                             # making sure that entered number is not less than 4 digit number
+        if len(num_to_rep) >self.lowerLimit:                                             # making sure that entered number is not less than 5 digit number
             for dig in self.rep_by:
                 new_no = num_to_rep.replace(digit_to_rep_with,dig)
                 if  new_no != num_to_rep and (not(int(new_no[-1])%2)) and (not(new_no[-1] == 0) ) :
