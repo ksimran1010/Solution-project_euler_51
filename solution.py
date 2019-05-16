@@ -5,7 +5,7 @@ import pandas as pd
 
 
 
-class Replace_digit:
+class Start_scan:
     def __init__(self):
         self.num_dig = int(input("please enter max number of digits (N) until which you want your search to be done"))
         if self.num_dig<= 5:
@@ -82,7 +82,7 @@ class Replace_digit:
                         temp_arr.append(new_no)
                         count +=1
 
-            print(count)
+
             if count >= self.prime_family_limit:
                 print('result found', temp_arr)
                 return(temp_arr)
@@ -94,12 +94,12 @@ class Replace_digit:
         primes_sig = pd.DataFrame(self.cropped_arr, dtype=np.str)
 
         for each_element in primes_sig[0]:
-            for dummy in [self.scan_number(each_element, x) for x in self.rep_by if each_element.count(x) >= 2]:
+            for dummy in [self.scan_number(each_element, x) for x in self.rep_by if each_element.count(x) >= 2 ]:
 
                 if dummy:
                     exit(0)
 
 
 
-new_search_obj = Replace_digit()
+new_search_obj = Start_scan()
 
