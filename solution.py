@@ -20,7 +20,7 @@ class Start_scan:
 
     def gen_primes(another_obj, n):            # not using self here as first argument as we want to isolate objects of this function
         '''
-       #         This code is an implementation of https://stackoverflow.com/a/33356284 (rwh_primes2 -fastest way of calculating prime numbers in python3 )
+       #         This code is an implementation ofsieve's algorithm( https://stackoverflow.com/a/33356284) (rwh_primes2 -fastest way of calculating prime numbers in python3 )
        #         : issues/bugs  solved  - extended range of n
        #              > earlier n> 6  >>> now n can be any whole number
        #
